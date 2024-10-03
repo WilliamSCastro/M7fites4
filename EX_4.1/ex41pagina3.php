@@ -10,28 +10,21 @@
     <p>ENDEVINA EL NOMBRE: </p>
     <?php
 
-        if(!isset($_POST["num_seleccionat"]) && isset($_SESSION["endevina"])){
+        if(!isset($_POST["endevina"]) && isset($_SESSION["endevina"])){
             $_SESSION["endevina"] = null;
         }
 
-        if(isset($_POST["num_seleccionat"])){
-            $_SESSION["endevina"] = $_POST["num_seleccionat"];
-            echo "NUM INTRODUCIDO = ";
-            echo $_SESSION["endevina"];
+        if(isset($_POST["endevina"])){
+            $_SESSION["endevina"] = $_POST["endevina"];
         }
 
         if(!isset($_SESSION["endevina"])) {
             echo "<form action='' method='POST'>";
                 echo "<label for='endevinar'></label>";
-                echo "<input type='number' id='endevinar' name='num_seleccionat'>";
+                echo "<input type='number' id='endevinar' name='endevina'>";
                 echo "<input type='submit' value='SUBMIT'>";
             echo "</form>";
         } else {
-            echo "Num a adivinar ";
-            echo $_SESSION["ocult"];
-            echo "<br>";
-            echo "Num introducido ";
-            echo $_SESSION["endevina"];
 
             if($_SESSION["ocult"] === $_SESSION["endevina"]){
                 echo "<p>CONGRATULATIONS!</p>";
@@ -47,7 +40,7 @@
 
                 echo "<form action='' method='POST'>";
                     echo "<label for='endevinar'></label>";
-                    echo "<input type='number' id='endevinar' name='num_seleccionat'>";
+                    echo "<input type='number' id='endevinar' name='endevina'>";
                     echo "<input type='submit' value='SUBMIT'>";
                 echo "</form>";
 

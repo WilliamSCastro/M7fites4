@@ -6,10 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="ex41pagina2.php" method="POST">
-        <label for="quantity">ENREGISTRA NOMBRE:</label>
-        <input type="number" id="quantity" name="ocult">
-        <input type="submit" value="SUBMIT">
+    <p>ENREGISTRA FRASE</p>
+    <form action="ex42pagina2.php" method="POST">
+        <input type="text" name="frase1">
+        <input type="submit" value="Enviar frase">
     </form>
 </body>
 </html>
